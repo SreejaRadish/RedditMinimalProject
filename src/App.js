@@ -1,23 +1,35 @@
-import logo from './logo.svg';
+
+import { useState,useEffect } from 'react';
 import './App.css';
 
 function App() {
+  const [items,setItems] = useState([]);
+  const [query,setQuery] =useState('');
+  useEffect(() => {
+    getItems();
+  },[query]);
+  const getItems = async () => {
+    const response = await fetch("https://www.reddit.com/r/popular.json");
+   
+    const data = await response.json();
+    if(data != null){
+      setItems(data.data.children);
+    }
+    
+console.log(data);
+      }
+      const submitHandler = (e) => {
+
+      }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <form className="search-form" >
+<input type="text"></input>
+<button type="submit" className="search-Button">Search</button>
+      </form>
+      <div className="itemWrapper">
+
+      </div>
     </div>
   );
 }
