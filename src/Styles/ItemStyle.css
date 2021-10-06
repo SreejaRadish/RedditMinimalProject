@@ -1,0 +1,11 @@
+
+.contentWrapper a {
+    text-decoration: none;
+    color: black;
+}
+
+.articleWrapper h3{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}

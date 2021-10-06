@@ -6,12 +6,14 @@
 }
 .App {
     min-height: 100vh;
-    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+   
     
 }
 
 .imageStyle{
-    border-radius: 5%;
+   border-radius: 5%;
+    height:500px;
+    width:800px;
 }
 .subredditImage{
     border-radius: 50%;
@@ -19,9 +21,124 @@
     width:25px;
     border: 1px black solid;
 }
-.contentWrapper{
-    display:fleX;
+
+header{
+    display:flex;
     flex-direction: row;
-    justify-content:space-around;
-    align-items:center;
+    justify-content: space-around;
+    align-items: center;
+    height:100px;
+    margin: 0 auto;
+}
+.leftWrapper h3{
+    font-size: 20px;
+    display: inline-flex;
+ 
+  align-items:center;
+    width:30%;
+
+}
+.rightWrapper{
+    display: inline-flex;
+  
+}
+.mainWrapper{
+    display: flex;
+    flex-direction: row;
+}
+.itemWrapper{
+    width: 60%;
+  float: left;
+    margin-left: auto;
+    text-decoration: none;
+    border-bottom: 1px solid lightgray;
+}
+.subReddits{
+    width: 30%;
+   
+    margin: 0 auto;
+    display: block;
+}
+.headinSpan{
+    color: rgb(245, 86, 38);
+    font-style: italic;
+}
+.input-search{
+width: 500px;
+height: 38px;
+padding: 10px;
+margin: 1px;
+box-shadow: rgb(240, 238, 238);
+background-color: rgb(214, 209, 209);
+border-style: none;
+}
+.search-Button{
+   
+    background-color: rgb(245, 86, 38);;
+    width:150px;
+    height:40px;
+  
+    border-style: none;
+    font-size: 20px;
+    text-shadow: rgb(95, 66, 66);
+}
+.logo-header{
+    height:20px;
+    width:20px;
+}
+
+.subReddit-img{
+    height: 40px;
+    width: 40px;
+    border: 3px solid;
+    border-radius: 50%;
+}
+.subredditWrapper li{
+    list-style-type: none;
+   margin:20px;
+  background-color: greycornsilk;
+   box-shadow: rgb(15, 15, 15);
+}
+.subReddit-button{
+    width: 250px;
+    font-size: 20px;
+    background-color: greycornsilk;
+    display: flex;
+    align-items: center;
+    border: none;
+}
+.subReddit-button:hover {
+    background-color: darkgrey;
+}
+.subReddit-button:active {
+    background-color: rgb(74, 74, 228);
+}
+.contentWrapper{
+   float: left;
+   text-decoration: none;
+   color: black;
+   margin: 5px;
+   
+   
+ 
+}
+.articleWrapper{
+    border-radius: 10px;
+  
+    min-height: 100px ;
+    margin: 5px;
+    
+}
+.item{
+    min-height: 100px;
+    background-color: greycornsilk;
+
+}
+.item-subReddit{
+    color: crimson;
+    font-weight: bold;
+    font-weight: 15px;
+}
+div{
+    display: block;
 }
